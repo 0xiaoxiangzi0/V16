@@ -1,0 +1,17 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList>
+                <Color id="0">000000</Color>
+            </ColorList>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="213120" compress_size="146866" ratio="68.91%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘3\project\config\111\bj11.png</Picture>
+                <Picture format="ARGB8565" id="2" convert_size="2574" compress_size="1998" ratio="77.62%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘3\project\config\表盘3\时针\h.png</Picture>
+                <Picture format="ARGB8565" id="3" convert_size="3240" compress_size="3184" ratio="98.27%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘3\project\config\表盘3\秒针\s.png</Picture>
+                <Picture format="ARGB8565" id="4" convert_size="4788" compress_size="3791" ratio="79.18%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘3\project\config\表盘3\分针\mn.png</Picture>
+            </PictureList>
+            <CellList/>
+        </Page>
+    </PageList>
+</Resbuilder>

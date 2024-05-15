@@ -1,0 +1,41 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList>
+                <Color id="0">000000</Color>
+                <Color id="1">FFFFFF</Color>
+            </ColorList>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="211515" compress_size="40484" ratio="19.14%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_1.png</Picture>
+                <Picture format="ARGB8565" id="2" convert_size="211515" compress_size="52456" ratio="24.80%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_2.png</Picture>
+                <Picture format="ARGB8565" id="3" convert_size="211515" compress_size="46198" ratio="21.84%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_3.png</Picture>
+                <Picture format="ARGB8565" id="4" convert_size="211515" compress_size="45114" ratio="21.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_4.png</Picture>
+                <Picture format="ARGB8565" id="5" convert_size="211515" compress_size="51596" ratio="24.39%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_5.png</Picture>
+                <Picture format="ARGB8565" id="6" convert_size="211515" compress_size="43613" ratio="20.62%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\背景动画\bird_6.png</Picture>
+                <Picture format="ARGB8565" id="7" convert_size="7176" compress_size="4018" ratio="55.99%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\ctrl_pic\hour.png</Picture>
+                <Picture format="ARGB8565" id="8" convert_size="1092" compress_size="715" ratio="65.48%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\0.png</Picture>
+                <Picture format="ARGB8565" id="9" convert_size="1092" compress_size="536" ratio="49.08%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\1.png</Picture>
+                <Picture format="ARGB8565" id="10" convert_size="1092" compress_size="642" ratio="58.79%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\2.png</Picture>
+                <Picture format="ARGB8565" id="11" convert_size="1092" compress_size="664" ratio="60.81%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\3.png</Picture>
+                <Picture format="ARGB8565" id="12" convert_size="1092" compress_size="626" ratio="57.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\4.png</Picture>
+                <Picture format="ARGB8565" id="13" convert_size="1092" compress_size="647" ratio="59.25%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\5.png</Picture>
+                <Picture format="ARGB8565" id="14" convert_size="1092" compress_size="741" ratio="67.86%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\6.png</Picture>
+                <Picture format="ARGB8565" id="15" convert_size="1092" compress_size="498" ratio="45.60%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\7.png</Picture>
+                <Picture format="ARGB8565" id="16" convert_size="1092" compress_size="734" ratio="67.22%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\8.png</Picture>
+                <Picture format="ARGB8565" id="17" convert_size="1092" compress_size="756" ratio="69.23%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\9.png</Picture>
+                <Picture format="ARGB8565" id="18" convert_size="10143" compress_size="5552" ratio="54.74%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\ctrl_pic\minute_sec.png</Picture>
+                <Picture format="ARGB8565" id="19" convert_size="1092" compress_size="352" ratio="32.23%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\maohao.png</Picture>
+                <Picture format="ARGB8565" id="20" convert_size="1092" compress_size="352" ratio="32.23%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘界面\project\config\蓝牙智能手表切图\数字\RED\maohao1.png</Picture>
+            </PictureList>
+            <CellList/>
+        </Page>
+        <Page id="1">
+            <ColorList>
+                <Color id="0">000000</Color>
+            </ColorList>
+            <PictureList/>
+            <CellList/>
+        </Page>
+    </PageList>
+</Resbuilder>

@@ -1,0 +1,40 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList>
+                <Color id="0">000000</Color>
+                <Color id="1">FFFFFF</Color>
+            </ColorList>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="2268" compress_size="2688" ratio="118.52%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\时针\h.png</Picture>
+                <Picture format="ARGB8565" id="2" convert_size="1740" compress_size="2305" ratio="132.47%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\秒针\s.png</Picture>
+                <Picture format="ARGB8565" id="3" convert_size="2436" compress_size="2816" ratio="115.60%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\分针\mn.png</Picture>
+                <Picture format="RGB565" id="4" convert_size="141010" compress_size="19745" ratio="14.00%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\watchface.bmp</Picture>
+                <Picture format="ARGB8565" id="5" convert_size="135" compress_size="180" ratio="133.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\0.png</Picture>
+                <Picture format="ARGB8565" id="6" convert_size="54" compress_size="99" ratio="183.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\1.png</Picture>
+                <Picture format="ARGB8565" id="7" convert_size="135" compress_size="171" ratio="126.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\2.png</Picture>
+                <Picture format="ARGB8565" id="8" convert_size="135" compress_size="180" ratio="133.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\3.png</Picture>
+                <Picture format="ARGB8565" id="9" convert_size="135" compress_size="165" ratio="122.22%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\4.png</Picture>
+                <Picture format="ARGB8565" id="10" convert_size="135" compress_size="176" ratio="130.37%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\5.png</Picture>
+                <Picture format="ARGB8565" id="11" convert_size="135" compress_size="180" ratio="133.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\6.png</Picture>
+                <Picture format="ARGB8565" id="12" convert_size="135" compress_size="161" ratio="119.26%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\7.png</Picture>
+                <Picture format="ARGB8565" id="13" convert_size="135" compress_size="180" ratio="133.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\8.png</Picture>
+                <Picture format="ARGB8565" id="14" convert_size="135" compress_size="180" ratio="133.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\热量--字号9\9.png</Picture>
+                <Picture format="ARGB8565" id="15" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\0.png</Picture>
+                <Picture format="ARGB8565" id="16" convert_size="72" compress_size="106" ratio="147.22%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\1.png</Picture>
+                <Picture format="ARGB8565" id="17" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\2.png</Picture>
+                <Picture format="ARGB8565" id="18" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\3.png</Picture>
+                <Picture format="ARGB8565" id="19" convert_size="120" compress_size="135" ratio="112.50%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\4.png</Picture>
+                <Picture format="ARGB8565" id="20" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\5.png</Picture>
+                <Picture format="ARGB8565" id="21" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\6.png</Picture>
+                <Picture format="ARGB8565" id="22" convert_size="96" compress_size="127" ratio="132.29%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\7.png</Picture>
+                <Picture format="ARGB8565" id="23" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\8.png</Picture>
+                <Picture format="ARGB8565" id="24" convert_size="96" compress_size="136" ratio="141.67%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\9.png</Picture>
+                <Picture format="ARGB8565" id="25" convert_size="42" compress_size="77" ratio="183.33%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\colon.png</Picture>
+                <Picture format="ARGB8565" id="26" convert_size="132" compress_size="182" ratio="137.88%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘5\project\config\表盘5\日期+时间--字号8\slash.png</Picture>
+            </PictureList>
+            <CellList/>
+        </Page>
+    </PageList>
+</Resbuilder>

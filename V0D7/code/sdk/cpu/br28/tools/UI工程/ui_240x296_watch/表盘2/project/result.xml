@@ -1,0 +1,16 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList>
+                <Color id="0">000000</Color>
+            </ColorList>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="213120" compress_size="140210" ratio="65.79%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘2\project\config\111\bj10.png</Picture>
+                <Picture format="ARGB8565" id="2" convert_size="7644" compress_size="2808" ratio="36.73%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘2\project\config\表盘2\时针\h.png</Picture>
+                <Picture format="ARGB8565" id="3" convert_size="10920" compress_size="4175" ratio="38.23%">F:\11.E_Cigarette\3.Project\V16\V0D2\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘2\project\config\表盘2\分针\mn.png</Picture>
+            </PictureList>
+            <CellList/>
+        </Page>
+    </PageList>
+</Resbuilder>

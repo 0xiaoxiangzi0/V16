@@ -1,0 +1,12 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList/>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="58968" compress_size="39062" ratio="66.24%">E:\preview.png</Picture>
+            </PictureList>
+            <CellList/>
+        </Page>
+    </PageList>
+</Resbuilder>

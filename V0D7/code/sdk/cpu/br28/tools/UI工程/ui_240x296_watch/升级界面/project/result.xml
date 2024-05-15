@@ -1,0 +1,21 @@
+﻿<?xml version="2.0" encoding="UTF-8"?>
+<Resbuilder>
+    <PageList>
+        <Page id="0">
+            <ColorList>
+                <Color id="0">000000</Color>
+                <Color id="1">DC38F4</Color>
+                <Color id="2">FFFFFF</Color>
+            </ColorList>
+            <PictureList>
+                <Picture format="ARGB8565" id="1" convert_size="207612" compress_size="13819" ratio="6.66%">F:\11.E_Cigarette\3.Project\V16\e_cigarette_3(JL)\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\升级界面\project\config\资源\progress bar.png</Picture>
+            </PictureList>
+            <CellList>
+                <Cell id="1">m91</Cell>
+                <Cell id="2">m92</Cell>
+                <Cell id="3">m93</Cell>
+                <Cell id="4">m114</Cell>
+            </CellList>
+        </Page>
+    </PageList>
+</Resbuilder>
