@@ -10338,6 +10338,9 @@ objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_page_move_en_callback,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,create_control_by_id,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_register_msg_handler,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,GetVbatUpdateTimerId,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,SetVbatUpdateTimerId,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,vbat_update_timer,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,sys_timer_del,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,res_fclose,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_res_flash_info_free,l
@@ -10346,8 +10349,11 @@ objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_get_child_by_id,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_io_set,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,GetOilNum,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,GetVbatValue,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,GetVbatPercent,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,rtc_calculate_week_val,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_pic_set_image_index,l
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,RecordUsagePower,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,elm_event_handler_begin_JL,
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,elm_event_handler_end_JL,
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,log_tag_const_i_UI,l

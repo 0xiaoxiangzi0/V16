@@ -154,7 +154,6 @@ int progress_refresh(int id, struct ui_progress *progress)
     return 0;
 }
 
-
 int multiprogress_refresh(int id, struct ui_multiprogress *multiprogress)
 {
 
@@ -754,28 +753,25 @@ static void WatchUpdateElmTimer(void *priv)
     uint16_t temp;
 
     extern uint8_t GetOilNum(void);
-//    extern uint16_t GetVbatValue(void);
-//    extern uint8_t GetVbatPercent(void);
-//    extern uint8_t GetDisplayGearPosition(void);
+    extern uint16_t GetVbatValue(void);
+    extern uint8_t GetVbatPercent(void);
+    extern uint8_t GetDisplayGearPosition(void);
 
     num.type = TYPE_STRING;
     
     num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
     ui_number_update_by_id(WATCH1_WATCH1_OIL, &num);
 
-    num.num_str = (u8 *)"3.90";
-//    num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
-//    StrVbatValue[3] = StrVbatValue[2];
-//    StrVbatValue[2] = StrVbatValue[1];
-//    StrVbatValue[1] = '.';
+    num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
+    StrVbatValue[3] = StrVbatValue[2];
+    StrVbatValue[2] = StrVbatValue[1];
+    StrVbatValue[1] = '.';
     ui_number_update_by_id(WATCH1_WATCH1_VBAT_VALUE, &num);
 
-    num.num_str = (u8 *)Int2String(85,StrVbatPercent);
-//    num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
+    num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
     ui_number_update_by_id(WATCH1_WATCH1_VBAT_PERCENT, &num);
 
-    num.num_str = (u8 *)Int2String(18,StrGearPosition);
-//    num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
+    num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
     ui_number_update_by_id(WATCH1_WATCH1_PWR, &num);
 }
 
@@ -1195,13 +1191,14 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
         if(!watch_update_elm_timer){
             watch_update_elm_timer = sys_timer_add(NULL, WatchUpdateElmTimer, 1000);
         }
-        // extern uint32_t GetVbatUpdateTimerId(void);
-        // extern void SetVbatUpdateTimerId(uint32_t id);
-        // extern void vbat_update_timer(void *priv);
-        // if(!GetVbatUpdateTimerId()){
-        //     SetVbatUpdateTimerId(sys_timer_add(NULL, vbat_update_timer, 50));
-        // }
+        extern uint32_t GetVbatUpdateTimerId(void);
+        extern void SetVbatUpdateTimerId(uint32_t id);
+        extern void vbat_update_timer(void *priv);
+        if(!GetVbatUpdateTimerId()){
+            SetVbatUpdateTimerId(sys_timer_add(NULL, vbat_update_timer, 50));
+        }
         break;
+
     case ON_CHANGE_SHOW:
         if (param.find_animation) {
             if (SHOW_BEGIN == watch_show_positon(dc)) {
@@ -2151,8 +2148,7 @@ static int WATCH1_pwr_onchange(void *_number, enum element_change_event event, v
 	    case ON_CHANGE_INIT:
             struct unumber num;
             num.type = TYPE_STRING;
-            num.num_str = (u8 *)Int2String(18,StrGearPosition);
-//            num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
+            num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
             ui_number_update_by_id(WATCH1_WATCH1_PWR, &num);
         	break;
     	case ON_CHANGE_RELEASE:
@@ -2173,10 +2169,10 @@ static int watch1_oil_onchange(void *_number, enum element_change_event event, v
 
 	switch (event) {
 	    case ON_CHANGE_INIT:
-            // extern void RecordUsagePower(void);
-            // extern uint8_t GetOilNum(void);
+            extern void RecordUsagePower(void);
+            extern uint8_t GetOilNum(void);
 
-            // RecordUsagePower();
+            RecordUsagePower();
             struct unumber num;
             num.type = TYPE_STRING;
             num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
@@ -2203,11 +2199,10 @@ static int watch1_bat_value_onchange(void *_number, enum element_change_event ev
             extern uint16_t GetVbatValue(void);
             struct unumber num;
             num.type = TYPE_STRING;
-            num.num_str = (u8 *)"4.15";
-//            num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
-            // StrVbatValue[3] = StrVbatValue[2];
-            // StrVbatValue[2] = StrVbatValue[1];
-            // StrVbatValue[1] = '.';
+            num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
+            StrVbatValue[3] = StrVbatValue[2];
+            StrVbatValue[2] = StrVbatValue[1];
+            StrVbatValue[1] = '.';
             ui_number_update_by_id(WATCH1_WATCH1_VBAT_VALUE, &num);
         	break;
     	case ON_CHANGE_RELEASE:
@@ -2228,11 +2223,10 @@ static int watch1_vabt_percent_onchange(void *_number, enum element_change_event
 
 	switch (event) {
 	    case ON_CHANGE_INIT:
-            // extern uint8_t GetVbatPercent(void);
+            extern uint8_t GetVbatPercent(void);
             struct unumber num;
             num.type = TYPE_STRING;
-             num.num_str = (u8 *)Int2String(96,StrVbatPercent);
-            // num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
+            num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
             ui_number_update_by_id(WATCH1_WATCH1_VBAT_PERCENT, &num);
         	break;
     	case ON_CHANGE_RELEASE:

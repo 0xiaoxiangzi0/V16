@@ -12,8 +12,8 @@ static u16 d_u16SmokingTimerID = 0;
 // #define CFG_USER_DEFINE_END   49
 #define  CFG_USER_OIL_QUANTITY 1
 
-#define BAT_PERCENT_0   5440//340
-#define BAT_PERCENT_100 6560//410
+#define BAT_PERCENT_0   3400//340
+#define BAT_PERCENT_100 4100//410
 
 #define USAGE_POWER_100  495000000   
 #define USAGE_POWER_75   338000000
@@ -84,13 +84,11 @@ static void get_e_cigarette_mic_state(void)
     switch(l_u8State){
         case 0:
             if(gpio_read(MIC_GPIO)){
-                printf("-----MIC_GPIO HIGH:1-----\n");
                 d_bMicDetectFlag = true;
                 l_u8State = 1;
                 l_u8Count = 0;
             }
             else{
-                printf("-----MIC_GPIO LOW:2-----\n");
                 d_bMicDetectFlag = false;
             }
             break;
@@ -98,11 +96,10 @@ static void get_e_cigarette_mic_state(void)
         case 1:
             d_bMicDetectFlag = true;
             if(!gpio_read(MIC_GPIO)){
-                printf("-----MIC_GPIO LOW:3-----\n");
                 l_u8Count++;
                 if(l_u8Count >=3 ){
-                    printf("-----MIC_GPIO LOW:4-----\n");
                     d_bMicDetectFlag = false;
+                    l_u8Count = 0;
                     l_u8State = 0;
                 }
             }
@@ -127,8 +124,8 @@ uint8_t UpdateBatPercent(void)
     uint8_t ret;
     uint8_t i;
 	    
-    d_u16Vbat = adc_get_voltage(AD_CH_VBAT) * 4 / 10;
-    SmoothFilter[SmoothIndex] = d_u16Vbat << 4;
+    d_u16Vbat = adc_get_voltage(AD_CH_VBAT) * 4;
+    SmoothFilter[SmoothIndex] = d_u16Vbat;
     SmoothIndex++;
     if(FILTER_NUMBER == SmoothIndex){
         SmoothIndex = 0;
@@ -171,9 +168,9 @@ uint8_t UpdateBatPercent(void)
         ret = 100;
     }
     else{
-        ret = (l_u32LastSum - BAT_PERCENT_0) * 10 / 112;
+        ret = (l_u32LastSum - BAT_PERCENT_0) / 7;
     }
-    d_strCigaretteDis.VbatValue = l_u32LastSum >> 4;
+    d_strCigaretteDis.VbatValue = l_u32LastSum / 10;
     return ret;
 }
 
@@ -184,7 +181,7 @@ static void ta_tb_pwm_init(void)
     printf("----ta_tb_pwm_init----\n");
     pwm_p_data.pwm_aligned_mode = pwm_edge_aligned;         //边沿对齐
     pwm_p_data.pwm_ch_num = PWM_CH_TA;                      //通道号
-    pwm_p_data.frequency = 200;                           //40KHz
+    pwm_p_data.frequency = 200;                             //40KHz
     pwm_p_data.duty = 0;                                    //占空比00%
     pwm_p_data.h_pin = TA_GPIO;                             //任意引脚
     pwm_p_data.l_pin = -1;                                  //任意引脚,不需要就填-1
@@ -193,7 +190,7 @@ static void ta_tb_pwm_init(void)
 
     pwm_p_data.pwm_aligned_mode = pwm_edge_aligned;         //边沿对齐
     pwm_p_data.pwm_ch_num = PWM_CH_TB;                      //通道号
-    pwm_p_data.frequency = 200;                           //40KHz
+    pwm_p_data.frequency = 200;                             //40KHz
     pwm_p_data.duty = 0;                                    //占空比0%
     pwm_p_data.h_pin = TB_GPIO;                             //任意引脚 
     pwm_p_data.l_pin = -1;                                  //任意引脚,不需要就填-1
@@ -213,31 +210,48 @@ void SetVbatUpdateTimerId(uint32_t id)
 
 void vbat_update_timer(void *priv)
 {
+    //上电还没有检测过电量
+    static uint8_t l_u8PowerOnFirstDet = true;
     uint32_t l_u32CurrentTime = 0;
-    uint8_t  l_u8UpdateVbatFlag = 0;
     static uint8_t l_u8Count = 0;
+    static uint8_t l_u8State = 0;
 
     l_u32CurrentTime = OSGetTime();
-
     //上次抽烟时间大于当前时间，说明时间戳溢出了，那么更新上一次抽烟时间
     if(d_u32LastSmokingTime > l_u32CurrentTime){
         d_u32LastSmokingTime = l_u32CurrentTime;
-        l_u8UpdateVbatFlag = 0;
     }
     
-    //距离上次抽烟时间过了2s，开始更新电量
-    if(l_u32CurrentTime - d_u32LastSmokingTime > TIME_2_SECOND){
-        d_strCigaretteDis.VbatPercent = UpdateBatPercent();
+    switch(l_u8State){
+        case 0:
+            if((l_u32CurrentTime - d_u32LastSmokingTime >= TIME_25_SECOND) ||
+               (l_u8PowerOnFirstDet)){
+                l_u8State = 1;
+                l_u8Count = 0;
+            }
+            break;
 
-        l_u8Count++;
-        if(l_u8Count > 100){
-            l_u8Count = 0;
-            sys_timer_del(d_u32VbatUpdateTimer);
-            d_u32VbatUpdateTimer = 0;
-            printf("d_u8VbatPercent = %d\n",d_strCigaretteDis.VbatPercent);
-            printf("d_strCigaretteDis.VbatValue = %d\n",d_strCigaretteDis.VbatValue);
-        }
-
+        case 1:
+            if((l_u32CurrentTime - d_u32LastSmokingTime >= TIME_25_SECOND) || 
+               (l_u8PowerOnFirstDet)){
+                d_strCigaretteDis.VbatPercent = UpdateBatPercent();
+                l_u8Count++;
+                if(l_u8Count > 50){
+                    l_u8PowerOnFirstDet = 0;
+                    sys_timer_del(d_u32VbatUpdateTimer);
+                    d_u32VbatUpdateTimer = 0;
+                    l_u8State = 0;
+                    printf("d_u8VbatPercent = %d\n",d_strCigaretteDis.VbatPercent);
+                    printf("d_strCigaretteDis.VbatValue = %d\n",d_strCigaretteDis.VbatValue);
+                }
+            }
+            else{
+                l_u8State = 0;
+            }
+            break;
+        
+        default:
+            break;
     }
 }
 
@@ -513,8 +527,8 @@ void RecordUsagePower(void)
                 d_strCigaretteDis.OilNum = 100;
             }
         }
-        printf("1.d_u32UsedPower = %d",d_u32UsedPower);
-        printf("1.OilNum = %d",d_strCigaretteDis.OilNum);
+        // printf("1.d_u32UsedPower = %d",d_u32UsedPower);
+        // printf("1.OilNum = %d",d_strCigaretteDis.OilNum);
     }
     else{
         if(l_bLastRsState && (!d_bRsState)){
@@ -537,8 +551,8 @@ void RecordUsagePower(void)
                     }
                 }
             }
-            printf("2.d_u32UsedPower = %d",d_u32UsedPower);
-            printf("2.OilNum = %d",d_strCigaretteDis.OilNum);
+            // printf("2.d_u32UsedPower = %d",d_u32UsedPower);
+            // printf("2.OilNum = %d",d_strCigaretteDis.OilNum);
 
             // //一次抽烟已经完成，可以退出抽烟界面了
             // if(0 != d_u16SmokingTimerID){	    
@@ -559,23 +573,18 @@ void SmokingDet(void *parm)
     get_e_cigarette_mic_state();
 
     if(!d_bMicDetectFlag){
-        printf("----SmokingDet:1----\n");
         l_u8MicDisableCount++;
-        printf("l_u8MicDisableCount = %d\n",l_u8MicDisableCount);
-        if(l_u8MicDisableCount >= 3){
-            printf("----SmokingDet:2----\n");
+        if(l_u8MicDisableCount >= 10){
             l_u8MicDisableCount = 0;
             if(0 != d_u16SmokingTimerID){
                 sys_timer_del(d_u16SmokingTimerID);
                 d_u16SmokingTimerID = 0;
                 UI_HIDE_CURR_WINDOW();
                 UI_SHOW_WINDOW(ID_WINDOW_CLOCK);
-                printf("2.l_u16SmokingTimerID = %d\n",d_u16SmokingTimerID);
             }
         }
     }
     else{
-        printf("----SmokingDet:3----\n");
         l_u8MicDisableCount = 0;
     }
 
@@ -588,6 +597,5 @@ void OpenSmokingTimer(void)
     if(d_u16SmokingTimerID == 0){
         ta_tb_pwm_init();
         d_u16SmokingTimerID = sys_timer_add(NULL, SmokingDet, 10);
-        printf("1.d_u16SmokingTimerID = %d\n",d_u16SmokingTimerID);
     }
 }

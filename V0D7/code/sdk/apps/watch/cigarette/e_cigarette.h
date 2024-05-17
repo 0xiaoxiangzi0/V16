@@ -10,7 +10,8 @@
 #define PWM_CH_TA pwm_ch0
 #define PWM_CH_TB pwm_ch1
 
-#define TIME_2_SECOND 200
+//OSGetTime()获取到的数字，相差1就是相差10ms
+#define TIME_25_SECOND 2500
 
 typedef struct{
     uint8_t DisplayGearPosition;
