@@ -10,9 +10,18 @@
 #define PWM_CH_TA pwm_ch0
 #define PWM_CH_TB pwm_ch1
 
+#define TIME_2_SECOND 200
+
+typedef struct{
+    uint8_t DisplayGearPosition;
+    uint8_t OilNum;
+    uint16_t VbatValue;
+    uint8_t VbatPercent;
+}STRUCT_CIGARETTE_DISPLAY;
+
 extern void e_cigarette_init(void);
 extern void AddDisplayPowerMode(void);
-extern uint8_t GetDisplayPowerMode(void);
+extern uint8_t GetDisplayGearPosition(void);
 extern void OpenSmokingTimer(void);
 
 #endif

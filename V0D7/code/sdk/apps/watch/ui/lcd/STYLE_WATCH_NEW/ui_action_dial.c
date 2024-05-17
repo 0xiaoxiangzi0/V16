@@ -753,15 +753,14 @@ static void WatchUpdateElmTimer(void *priv)
     static  uint8_t state=0;
     uint16_t temp;
 
-//    extern uint8_t GetOilNum(void);
+    extern uint8_t GetOilNum(void);
 //    extern uint16_t GetVbatValue(void);
 //    extern uint8_t GetVbatPercent(void);
 //    extern uint8_t GetDisplayGearPosition(void);
 
     num.type = TYPE_STRING;
     
-    num.num_str = (u8 *)Int2String(95,StrOilNum);
-//    num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
+    num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
     ui_number_update_by_id(WATCH1_WATCH1_OIL, &num);
 
     num.num_str = (u8 *)"3.90";
@@ -1794,7 +1793,7 @@ static int WATCH_onkey(void *ctr, struct element_key_event *e)
             struct unumber num;
             num.type = TYPE_NUM;
             num.numbs = 1;
-            num.number[0] = GetDisplayPowerMode();
+            num.number[0] = GetDisplayGearPosition();
             ui_number_update_by_id(WATCH1_WATCH1_PWR, &num);
         }
         break;
@@ -2180,8 +2179,7 @@ static int watch1_oil_onchange(void *_number, enum element_change_event event, v
             // RecordUsagePower();
             struct unumber num;
             num.type = TYPE_STRING;
-            num.num_str = (u8 *)Int2String(97,StrOilNum);
-//            num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
+            num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
             ui_number_update_by_id(WATCH1_WATCH1_OIL, &num);
         	break;
     	case ON_CHANGE_RELEASE:
