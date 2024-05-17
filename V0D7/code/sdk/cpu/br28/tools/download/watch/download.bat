@@ -51,8 +51,8 @@ set /p "themd5=" < "md5.bin"
 
 ::echo %1
 
-::set CHIPKEY=BLF-AC701N-7EC3.key
-set CHIPKEY=default.key
+set CHIPKEY=BLF-AC701N-7EC3.key
+::set CHIPKEY=default.key
 
 :: 8MBytes
 ::..\..\packres.exe -keep-suffix-case F_ASCII.PIX ascii.res -n res -o font

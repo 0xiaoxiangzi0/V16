@@ -26,28 +26,28 @@
                         <language_name LANG="Arabic">阿拉伯语</language_name>
                 </LanguageList>
                 <Fonts>
-                        <font00 lfClipPrecision="0" lfCharSet="134" lfFaceName="Cambria" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font01 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font02 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font03 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font04 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font05 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-32" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font06 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font07 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font08 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font09 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font10 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font11 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font12 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font13 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font14 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font15 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font16 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font17 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font18 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font19 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font20 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
-                        <font21 lfClipPrecision="0" lfCharSet="134" lfFaceName="宋体" lfStrikeOut="0" lfOrientation="0" lfQuality="0" lfItalic="0" lfPitchAndFamily="2" lfOutPrecision="0" lfHeight="-16" lfUnderline="0" lfWeight="400" lfWidth="0" lfEscapement="0"/>
+                        <font00 lfFaceName="Cambria" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font01 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font02 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font03 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font04 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font05 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-32" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font06 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font07 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font08 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font09 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font10 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font11 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font12 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font13 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font14 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font15 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font16 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font17 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font18 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font19 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font20 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
+                        <font21 lfFaceName="宋体" lfUnderline="0" lfWidth="0" lfStrikeOut="0" lfOutPrecision="0" lfHeight="-16" lfCharSet="134" lfItalic="0" lfQuality="0" lfWeight="400" lfEscapement="0" lfOrientation="0" lfPitchAndFamily="2" lfClipPrecision="0"/>
                 </Fonts>
                 <endian>LITTLEENDIAN</endian>
                 <paneltype>TFTPANEL</paneltype>
@@ -56,34 +56,48 @@
                 <PageList>
                         <Page id="0">
                                 <ColorList>
-                                        <Color>000000</Color>
+                                        <Color>FF0000</Color>
                                         <Color>FFFFFF</Color>
                                         <Color>8DEEDB</Color>
+                                        <Color>000000</Color>
                                 </ColorList>
                                 <PictureList>
-                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\m.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\5.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\4.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\1.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\09.png</Picture>
-                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\s.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\16.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\0.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\3.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\6.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\07.png</Picture>
-                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\bj1.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\02.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\03.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\01.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\13.png</Picture>
-                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\h.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\2.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\00.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\08.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\05.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\04.png</Picture>
-                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\06.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\05.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\14.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\0.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\01.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\06.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\16.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\02.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\09.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\4.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\3.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\6.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\03.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\00.png</Picture>
+                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\h.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\5.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\04.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\08.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\01.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\02.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\2.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\05.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\07.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\09.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\13.png</Picture>
+                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\m.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\07.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\04.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\06.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\00.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\14.png</Picture>
+                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\bj1.png</Picture>
+                                        <Picture fmt="ARGB8565">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\s.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\03.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\1.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\08.png</Picture>
+                                        <Picture fmt="AL44">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\11.png</Picture>
                                 </PictureList>
                                 <CellList/>
                         </Page>

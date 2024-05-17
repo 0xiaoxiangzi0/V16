@@ -81,7 +81,6 @@ static void PROGRESS_CHARGE_timer(void *priv)
     time_r.min = time.min;
     time_r.sec = time.sec;
     ui_time_update_by_id(BATCHARGE_TIME, &time_r);
-
 }
 
 

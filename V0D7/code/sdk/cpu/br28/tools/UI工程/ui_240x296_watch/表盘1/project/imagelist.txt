@@ -1,20 +1,2 @@
-00.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/00.pngbaskslash equal zero else
-config/111/num3/00.png
-01.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/01.pngbaskslash equal zero else
-config/111/num3/01.png
-02.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/02.pngbaskslash equal zero else
-config/111/num3/02.png
-03.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/03.pngbaskslash equal zero else
-config/111/num3/03.png
-04.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/04.pngbaskslash equal zero else
-config/111/num3/04.png
-05.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/05.pngbaskslash equal zero else
-config/111/num3/05.png
-06.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/06.pngbaskslash equal zero else
-config/111/num3/06.png
-07.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/07.pngbaskslash equal zero else
-config/111/num3/07.png
-08.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/08.pngbaskslash equal zero else
-config/111/num3/08.png
-09.png|F:/11.E_Cigarette/3.Project/V16/V0D1/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/09.pngbaskslash equal zero else
-config/111/num3/09.png
+11.png|F:/11.E_Cigarette/3.Project/V16Git/V0D7/code/sdk/cpu/br28/tools/UI工程/ui_240x296_watch/表盘1/project/config/111/num3/11.pngbaskslash equal zero else
+config/111/num3/11.png

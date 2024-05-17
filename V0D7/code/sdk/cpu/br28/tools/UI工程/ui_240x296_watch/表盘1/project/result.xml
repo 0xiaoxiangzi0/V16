@@ -5,32 +5,46 @@
             <ColorList>
                 <Color id="0">000000</Color>
                 <Color id="1">8DEEDB</Color>
-                <Color id="2">FFFFFF</Color>
+                <Color id="2">FF0000</Color>
+                <Color id="3">FFFFFF</Color>
             </ColorList>
             <PictureList>
-                <Picture format="AL44" id="1" convert_size="506" compress_size="532" ratio="105.14%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\0.png</Picture>
-                <Picture format="AL44" id="2" convert_size="506" compress_size="450" ratio="88.93%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\1.png</Picture>
-                <Picture format="AL44" id="3" convert_size="506" compress_size="546" ratio="107.91%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\2.png</Picture>
-                <Picture format="AL44" id="4" convert_size="506" compress_size="474" ratio="93.68%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\3.png</Picture>
-                <Picture format="AL44" id="5" convert_size="506" compress_size="398" ratio="78.66%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\4.png</Picture>
-                <Picture format="AL44" id="6" convert_size="506" compress_size="464" ratio="91.70%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\5.png</Picture>
-                <Picture format="AL44" id="7" convert_size="506" compress_size="493" ratio="97.43%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\6.png</Picture>
-                <Picture format="AL44" id="8" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\00.png</Picture>
-                <Picture format="AL44" id="9" convert_size="152" compress_size="192" ratio="126.32%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\01.png</Picture>
-                <Picture format="AL44" id="10" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\02.png</Picture>
-                <Picture format="AL44" id="11" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\03.png</Picture>
-                <Picture format="AL44" id="12" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\04.png</Picture>
-                <Picture format="AL44" id="13" convert_size="152" compress_size="208" ratio="136.84%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\05.png</Picture>
-                <Picture format="AL44" id="14" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\06.png</Picture>
-                <Picture format="AL44" id="15" convert_size="152" compress_size="201" ratio="132.24%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\07.png</Picture>
-                <Picture format="AL44" id="16" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\08.png</Picture>
-                <Picture format="AL44" id="17" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\09.png</Picture>
-                <Picture format="AL44" id="18" convert_size="130" compress_size="155" ratio="119.23%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\13.png</Picture>
-                <Picture format="AL44" id="19" convert_size="130" compress_size="155" ratio="119.23%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\16.png</Picture>
-                <Picture format="ARGB8565" id="20" convert_size="213120" compress_size="136003" ratio="63.82%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\bj1.png</Picture>
-                <Picture format="ARGB8565" id="21" convert_size="9060" compress_size="3286" ratio="36.27%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\h.png</Picture>
-                <Picture format="ARGB8565" id="22" convert_size="9060" compress_size="4462" ratio="49.25%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\m.png</Picture>
-                <Picture format="ARGB8565" id="23" convert_size="9060" compress_size="3879" ratio="42.81%">F:\11.E_Cigarette\3.Project\V16\V0D1\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\s.png</Picture>
+                <Picture format="AL44" id="1" convert_size="506" compress_size="532" ratio="105.14%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\0.png</Picture>
+                <Picture format="AL44" id="2" convert_size="506" compress_size="450" ratio="88.93%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\1.png</Picture>
+                <Picture format="AL44" id="3" convert_size="506" compress_size="546" ratio="107.91%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\2.png</Picture>
+                <Picture format="AL44" id="4" convert_size="506" compress_size="474" ratio="93.68%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\3.png</Picture>
+                <Picture format="AL44" id="5" convert_size="506" compress_size="398" ratio="78.66%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\4.png</Picture>
+                <Picture format="AL44" id="6" convert_size="506" compress_size="464" ratio="91.70%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\5.png</Picture>
+                <Picture format="AL44" id="7" convert_size="506" compress_size="493" ratio="97.43%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\week\6.png</Picture>
+                <Picture format="AL44" id="8" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\00.png</Picture>
+                <Picture format="AL44" id="9" convert_size="152" compress_size="192" ratio="126.32%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\01.png</Picture>
+                <Picture format="AL44" id="10" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\02.png</Picture>
+                <Picture format="AL44" id="11" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\03.png</Picture>
+                <Picture format="AL44" id="12" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\04.png</Picture>
+                <Picture format="AL44" id="13" convert_size="152" compress_size="208" ratio="136.84%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\05.png</Picture>
+                <Picture format="AL44" id="14" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\06.png</Picture>
+                <Picture format="AL44" id="15" convert_size="152" compress_size="201" ratio="132.24%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\07.png</Picture>
+                <Picture format="AL44" id="16" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\08.png</Picture>
+                <Picture format="AL44" id="17" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\09.png</Picture>
+                <Picture format="AL44" id="18" convert_size="174" compress_size="231" ratio="132.76%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num1\14.png</Picture>
+                <Picture format="AL44" id="19" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\00.png</Picture>
+                <Picture format="AL44" id="20" convert_size="152" compress_size="192" ratio="126.32%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\01.png</Picture>
+                <Picture format="AL44" id="21" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\02.png</Picture>
+                <Picture format="AL44" id="22" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\03.png</Picture>
+                <Picture format="AL44" id="23" convert_size="152" compress_size="203" ratio="133.55%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\04.png</Picture>
+                <Picture format="AL44" id="24" convert_size="152" compress_size="208" ratio="136.84%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\05.png</Picture>
+                <Picture format="AL44" id="25" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\06.png</Picture>
+                <Picture format="AL44" id="26" convert_size="152" compress_size="201" ratio="132.24%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\07.png</Picture>
+                <Picture format="AL44" id="27" convert_size="152" compress_size="209" ratio="137.50%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\08.png</Picture>
+                <Picture format="AL44" id="28" convert_size="152" compress_size="207" ratio="136.18%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\09.png</Picture>
+                <Picture format="AL44" id="29" convert_size="130" compress_size="145" ratio="111.54%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\11.png</Picture>
+                <Picture format="AL44" id="30" convert_size="130" compress_size="155" ratio="119.23%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\13.png</Picture>
+                <Picture format="AL44" id="31" convert_size="174" compress_size="231" ratio="132.76%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\14.png</Picture>
+                <Picture format="AL44" id="32" convert_size="130" compress_size="155" ratio="119.23%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\num3\16.png</Picture>
+                <Picture format="ARGB8565" id="33" convert_size="213120" compress_size="136003" ratio="63.82%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\bj1.png</Picture>
+                <Picture format="ARGB8565" id="34" convert_size="9060" compress_size="3286" ratio="36.27%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\h.png</Picture>
+                <Picture format="ARGB8565" id="35" convert_size="9060" compress_size="4462" ratio="49.25%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\m.png</Picture>
+                <Picture format="ARGB8565" id="36" convert_size="9060" compress_size="3879" ratio="42.81%">F:\11.E_Cigarette\3.Project\V16Git\V0D7\code\sdk\cpu\br28\tools\UI工程\ui_240x296_watch\表盘1\project\config\111\point\s.png</Picture>
             </PictureList>
             <CellList/>
         </Page>

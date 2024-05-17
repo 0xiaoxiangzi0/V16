@@ -62,6 +62,12 @@ void ui_send_event(u16 event, u32 val);
 static u32 sidebar_root = 0;
 
 static int watch_show_timer = 0;
+static int watch_update_elm_timer = 0;
+
+static  char StrGearPosition[7];
+static  char StrOilNum[7];
+static  char StrVbatValue[7];
+static  char StrVbatPercent[7];
 
 int get_elapse_time(struct sys_time *time)
 {
@@ -717,6 +723,62 @@ static void WATCH_timer(void *priv)
     }
 }
 
+char* Int2String(int num,char *str)//10进制 
+{
+    int i = 0;//指示填充str 
+
+    //转换 
+    do
+    {
+        str[i++] = num%10 + '0';//取num最低位 字符0~9的ASCII码是48~57；简单来说数字0+48=48，ASCII码对应字符'0' 
+        num /= 10;//去掉最低位    
+    }while(num);//num不为0继续循环
+    
+    str[i] = '\0';
+    //对称交换 
+    int j = 0;
+    for(;j<i/2;j++)
+    {
+        //对称交换两端的值 其实就是省下中间变量交换a+b的值：a=a+b;b=a-b;a=a-b; 
+        str[j] = str[j] + str[i-1-j];
+        str[i-1-j] = str[j] - str[i-1-j];
+        str[j] = str[j] - str[i-1-j];
+    } 
+    
+    return str;//返回转换后的值 
+}
+static void WatchUpdateElmTimer(void *priv)
+{
+    struct  unumber num;
+    static  uint8_t state=0;
+    uint16_t temp;
+
+//    extern uint8_t GetOilNum(void);
+//    extern uint16_t GetVbatValue(void);
+//    extern uint8_t GetVbatPercent(void);
+//    extern uint8_t GetDisplayGearPosition(void);
+
+    num.type = TYPE_STRING;
+    
+    num.num_str = (u8 *)Int2String(95,StrOilNum);
+//    num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
+    ui_number_update_by_id(WATCH1_WATCH1_OIL, &num);
+
+    num.num_str = (u8 *)"3.90";
+//    num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
+//    StrVbatValue[3] = StrVbatValue[2];
+//    StrVbatValue[2] = StrVbatValue[1];
+//    StrVbatValue[1] = '.';
+    ui_number_update_by_id(WATCH1_WATCH1_VBAT_VALUE, &num);
+
+    num.num_str = (u8 *)Int2String(85,StrVbatPercent);
+//    num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
+    ui_number_update_by_id(WATCH1_WATCH1_VBAT_PERCENT, &num);
+
+    num.num_str = (u8 *)Int2String(18,StrGearPosition);
+//    num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
+    ui_number_update_by_id(WATCH1_WATCH1_PWR, &num);
+}
 
 int get_watch_animation_path(int style, char *anim_path, int path_len)
 {
@@ -1018,7 +1080,7 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
 
     switch (e) {
     case ON_CHANGE_INIT:
-
+        
         get_sys_time(&time);
 
         ui_watch_set_time(watch, time.hour % 12, time.min, time.sec);
@@ -1042,6 +1104,7 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
         param.curr_picture = 0;
         param.view_file = NULL;
 
+        //选择表盘背景
         /* bg_path = watch_get_background(); */
         bg_path = watch_bgp_get_related(watch_get_style());
         log_info("\n\n\n\ntest %d, %s\n\n\n\n\n", watch_get_style(), bg_path);
@@ -1067,8 +1130,6 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
         if (!watch_show_timer) {
             watch_show_timer = sys_timer_add(NULL, WATCH_timer, timer_interval);
         }
-
-
 
         int root = 0;
         if (elm && elm->parent) {
@@ -1132,6 +1193,15 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
             ui_register_msg_handler(DIAL_PAGE_0, ui_pd_menu_msg_handler);//注册消息交互的回调
         }
 #endif
+        if(!watch_update_elm_timer){
+            watch_update_elm_timer = sys_timer_add(NULL, WatchUpdateElmTimer, 1000);
+        }
+        // extern uint32_t GetVbatUpdateTimerId(void);
+        // extern void SetVbatUpdateTimerId(uint32_t id);
+        // extern void vbat_update_timer(void *priv);
+        // if(!GetVbatUpdateTimerId()){
+        //     SetVbatUpdateTimerId(sys_timer_add(NULL, vbat_update_timer, 50));
+        // }
         break;
     case ON_CHANGE_SHOW:
         if (param.find_animation) {
@@ -1150,6 +1220,11 @@ static int WATCH_onchange(void *ctr, enum element_change_event e, void *arg)
         }
         break;
     case ON_CHANGE_RELEASE:
+        if(watch_update_elm_timer){
+            sys_timer_del(watch_update_elm_timer);
+            watch_update_elm_timer = 0;
+        }
+
         sidebar_root = 0;
         if (watch_show_timer) {
             sys_timer_del(watch_show_timer);
@@ -2075,49 +2150,102 @@ static int WATCH1_pwr_onchange(void *_number, enum element_change_event event, v
 
 	switch (event) {
 	    case ON_CHANGE_INIT:
-            number->nums = 1;
-            number->number[0] = GetDisplayPowerMode();
-            //接管按键事件
-            key_ui_takeover(1);
+            struct unumber num;
+            num.type = TYPE_STRING;
+            num.num_str = (u8 *)Int2String(18,StrGearPosition);
+//            num.num_str = (u8 *)Int2String((int)GetDisplayGearPosition(),StrGearPosition);
+            ui_number_update_by_id(WATCH1_WATCH1_PWR, &num);
         	break;
     	case ON_CHANGE_RELEASE:
-            //释放按键事件
-            key_ui_takeover(0);
         	break;
   }
     return false;
 }
 
-static int WATCH1_pwr_onkey(void *ctr, struct element_key_event *e)
-{
-    struct layout *layout = (struct layout *)ctr;
-
-    printf("-----WATCH1_pwr_onkey-----\n");
-    switch (e->value) {
-    case KEY_OK:
-        break;
-    case KEY_UI_SHORTCUT:
-        printf("UI:KEY_UI_SHORTCUT\n");
-        AddDisplayPowerMode();
-
-        struct ui_number *number = (struct ui_number *)ctr;
-        struct unumber num;
-        num.type = TYPE_NUM;
-        num.numbs =  1;
-        num.number[0] = GetDisplayPowerMode();
-        ui_number_update(number, &num);
-        ui_core_redraw(number);
-        break;
-    default:
-        return false;
-    }
-    return false;
-
-}
-
 REGISTER_UI_EVENT_HANDLER(WATCH1_WATCH1_PWR)
   .onchange  = WATCH1_pwr_onchange,
-  .onkey    = WATCH1_pwr_onkey,
+  .onkey     = NULL,
+  .ontouch   = NULL,
+};
+
+static int watch1_oil_onchange(void *_number, enum element_change_event event, void *arg)
+{
+    struct ui_number *number = (struct ui_number *)_number;
+
+	switch (event) {
+	    case ON_CHANGE_INIT:
+            // extern void RecordUsagePower(void);
+            // extern uint8_t GetOilNum(void);
+
+            // RecordUsagePower();
+            struct unumber num;
+            num.type = TYPE_STRING;
+            num.num_str = (u8 *)Int2String(97,StrOilNum);
+//            num.num_str = (u8 *)Int2String((int)GetOilNum(),StrOilNum);
+            ui_number_update_by_id(WATCH1_WATCH1_OIL, &num);
+        	break;
+    	case ON_CHANGE_RELEASE:
+        	break;
+  }
+    return false;
+}
+
+REGISTER_UI_EVENT_HANDLER(WATCH1_WATCH1_OIL)
+  .onchange  = watch1_oil_onchange,
+  .onkey    = NULL,
+  .ontouch = NULL,
+};
+
+static int watch1_bat_value_onchange(void *_number, enum element_change_event event, void *arg)
+{
+    struct ui_number *number = (struct ui_number *)_number;
+
+	switch (event) {
+	    case ON_CHANGE_INIT:
+            extern uint16_t GetVbatValue(void);
+            struct unumber num;
+            num.type = TYPE_STRING;
+            num.num_str = (u8 *)"4.15";
+//            num.num_str = (u8 *)Int2String((int)GetVbatValue(),StrVbatValue);
+            // StrVbatValue[3] = StrVbatValue[2];
+            // StrVbatValue[2] = StrVbatValue[1];
+            // StrVbatValue[1] = '.';
+            ui_number_update_by_id(WATCH1_WATCH1_VBAT_VALUE, &num);
+        	break;
+    	case ON_CHANGE_RELEASE:
+        	break;
+  }
+    return false;
+}
+
+REGISTER_UI_EVENT_HANDLER(WATCH1_WATCH1_VBAT_VALUE)
+  .onchange  = watch1_bat_value_onchange,
+  .onkey    = NULL,
+  .ontouch = NULL,
+};
+
+static int watch1_vabt_percent_onchange(void *_number, enum element_change_event event, void *arg)
+{
+    struct ui_number *number = (struct ui_number *)_number;
+
+	switch (event) {
+	    case ON_CHANGE_INIT:
+            // extern uint8_t GetVbatPercent(void);
+            struct unumber num;
+            num.type = TYPE_STRING;
+             num.num_str = (u8 *)Int2String(96,StrVbatPercent);
+            // num.num_str = (u8 *)Int2String((int)GetVbatPercent(),StrVbatPercent);
+            ui_number_update_by_id(WATCH1_WATCH1_VBAT_PERCENT, &num);
+        	break;
+    	case ON_CHANGE_RELEASE:
+        	break;
+  }
+    return false;
+}
+
+REGISTER_UI_EVENT_HANDLER(WATCH1_WATCH1_VBAT_PERCENT)
+  .onchange  = watch1_vabt_percent_onchange,
+  .onkey    = NULL,
   .ontouch = NULL,
 };
 

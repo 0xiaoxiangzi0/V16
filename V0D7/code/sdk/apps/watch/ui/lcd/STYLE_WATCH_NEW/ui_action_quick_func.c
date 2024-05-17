@@ -25,8 +25,6 @@
 
 #define STYLE_NAME  JL
 
-static u16 smoke_timer = 0;
-
 static int quick_func_page_onchange(void *_ctrl, enum element_change_event event, void *arg)
 {
     switch (event) {

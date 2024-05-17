@@ -358,11 +358,15 @@ int app_common_key_msg_deal(struct sys_event *event)
         }
 #endif
 
+        //电子烟应用中，这个分支用不到
         if ((sport_status != 4) & (sport_status != 0)) {
+            printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
             if (ID_WINDOW_SPORT_CTRL == UI_GET_WINDOW_ID()) {
+                printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
                 UI_HIDE_CURR_WINDOW();
                 UI_SHOW_WINDOW(ID_WINDOW_SPORT_INFO);
             } else {
+                printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
                 __execise_hd.execise_ctrl_status_set(-1, SPORT_STATUS_PAUSE);
                 sport_info_sync_pause_exercise_resp();
                 watch_sport_pause();
@@ -372,13 +376,19 @@ int app_common_key_msg_deal(struct sys_event *event)
             }
             break;
         }
+
         if (ID_WINDOW_BT == UI_GET_WINDOW_ID()) {
+            printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
+            //由表盘页面跳转到快捷菜单页面
             ui_show_menu_page();
         } else {
             if (ui_page_get_auto_sw_effect() == 0) {
+                printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
+                //不需要跳转特效时，由其他页面（包含快捷菜单页面）切换到表盘页面
                 UI_HIDE_CURR_WINDOW();
                 UI_SHOW_WINDOW(ID_WINDOW_BT);
             } else {
+                printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
                 static struct effect_sca_alpha sal = {0};
                 sal.alpha = 100;
                 sal.cnt = 5;

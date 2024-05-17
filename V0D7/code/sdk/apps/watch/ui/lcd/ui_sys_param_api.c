@@ -75,11 +75,11 @@ const static int short_key_tab[] = {
     ID_WINDOW_SET,                  //设置
 };
 
-// 应用列表类型
+// 应用列表类型：菜单风格
 const static int app_list_type_tab[] = {
-    ID_WINDOW_VMENU,
-    ID_WINDOW_MAIN,
-    ID_WINDOW_STAR_MENU,
+    ID_WINDOW_VMENU,      //列表（垂直控件）
+    ID_WINDOW_MAIN,       //九宫格（表格控件）
+    ID_WINDOW_STAR_MENU,  //满天星（单纯图片通过手动放置的）
 };
 
 extern void sys_enter_soft_poweroff(void *priv);
@@ -564,11 +564,15 @@ u8 ui_style_vm_init(void)
 u8 ui_show_menu_page()
 {
     u8 menu_style = get_ui_sys_param(MenuStyle);
+
+    printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
     if (menu_style < ARRAY_SIZE(app_list_type_tab)) {
         if (ui_page_get_auto_sw_effect() == 0) {
+            //不需要页面跳转特效，直接跳转到选定的菜单类型页面
             UI_HIDE_CURR_WINDOW();
             UI_SHOW_WINDOW(app_list_type_tab[menu_style]);
         } else {
+            //需要跳转特效，按照跳转特效风格跳转到选定菜单页面
             static struct effect_auto_pass pass = {0};
             pass.pl = 0;
             pass.direction = 0;

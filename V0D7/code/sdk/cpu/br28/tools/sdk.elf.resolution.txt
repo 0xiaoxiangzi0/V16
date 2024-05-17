@@ -10300,6 +10300,7 @@ objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,printf,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,watch_child_onchange,pl
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,watch_child_cb,pl
+-r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,Int2String,pl
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,get_watch_animation_path,pl
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,watch_get_item,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,strlen,l
@@ -10346,8 +10347,6 @@ objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_io_set,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,rtc_calculate_week_val,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,ui_pic_set_image_index,l
--r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,key_ui_takeover,l
--r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,puts,l
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,elm_event_handler_begin_JL,
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,elm_event_handler_end_JL,
 -r=objs/apps/watch/ui/lcd/STYLE_WATCH_NEW/ui_action_dial.c.o,log_tag_const_i_UI,l
