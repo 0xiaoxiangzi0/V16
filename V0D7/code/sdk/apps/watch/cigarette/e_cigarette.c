@@ -12,14 +12,10 @@ static u16 d_u16SmokingTimerID = 0;
 // #define CFG_USER_DEFINE_END   49
 #define  CFG_USER_OIL_QUANTITY 1
 
-#define BAT_PERCENT_0   3400//340
+#define BAT_PERCENT_0   3500//350
 #define BAT_PERCENT_100 4100//410
 
-#define USAGE_POWER_100  495000000   
-#define USAGE_POWER_75   338000000
-#define USAGE_POWER_50   238000000
-#define USAGE_POWER_25   138000000
-#define USAGE_POWER_0    0
+#define USAGE_POWER_100  247500000   
 
 uint16_t d_u16Vbat = 430;
 uint32_t d_u32VbatUpdateTimer = 0;
@@ -168,7 +164,7 @@ uint8_t UpdateBatPercent(void)
         ret = 100;
     }
     else{
-        ret = (l_u32LastSum - BAT_PERCENT_0) / 7;
+        ret = (l_u32LastSum - BAT_PERCENT_0) / 6;
     }
     d_strCigaretteDis.VbatValue = l_u32LastSum / 10;
     return ret;
@@ -378,10 +374,15 @@ static void fire_tA_tb(void)
     	    if(d_bMicDetectFlag){
                 d_bMicDetectFlag = FALSE;
         
-                l_u8State = 1;
-    			d_bRsState = TRUE;
-				d_u32RsUsedTime = OSGetTime();
-                l_bRsSupersedeFlag = !l_bRsSupersedeFlag;
+                if(0 == d_strCigaretteDis.VbatPercent){
+                    printf("Low battery, unable to smoke\n");
+                }
+                else{
+                    l_u8State = 1;
+                    d_bRsState = TRUE;
+                    d_u32RsUsedTime = OSGetTime();
+                    l_bRsSupersedeFlag = !l_bRsSupersedeFlag;
+                }
             }
     		break;
     		

@@ -188,7 +188,6 @@ void app_main()
     }
 #endif
     /* sys_timer_add(NULL, mem_printf, 1000); */
-    e_cigarette_init();
     app_task_loop();
 }
 

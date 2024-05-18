@@ -5957,7 +5957,6 @@ objs/apps/watch/app_main.c.o
 -r=objs/apps/watch/app_main.c.o,ui_update_status,l
 -r=objs/apps/watch/app_main.c.o,user_file_flash_file_download_init,l
 -r=objs/apps/watch/app_main.c.o,ex_flash_file_download_init,l
--r=objs/apps/watch/app_main.c.o,e_cigarette_init,l
 -r=objs/apps/watch/app_main.c.o,os_system_info_output,l
 -r=objs/apps/watch/app_main.c.o,app_curr_task,l
 -r=objs/apps/watch/app_main.c.o,log_tag_const_i_APP,l
