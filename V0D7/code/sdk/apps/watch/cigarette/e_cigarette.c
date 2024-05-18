@@ -181,7 +181,7 @@ static void ta_tb_pwm_init(void)
     printf("----ta_tb_pwm_init----\n");
     pwm_p_data.pwm_aligned_mode = pwm_edge_aligned;         //边沿对齐
     pwm_p_data.pwm_ch_num = PWM_CH_TA;                      //通道号
-    pwm_p_data.frequency = 200;                             //40KHz
+    pwm_p_data.frequency = 500;                             //40KHz
     pwm_p_data.duty = 0;                                    //占空比00%
     pwm_p_data.h_pin = TA_GPIO;                             //任意引脚
     pwm_p_data.l_pin = -1;                                  //任意引脚,不需要就填-1
@@ -190,7 +190,7 @@ static void ta_tb_pwm_init(void)
 
     pwm_p_data.pwm_aligned_mode = pwm_edge_aligned;         //边沿对齐
     pwm_p_data.pwm_ch_num = PWM_CH_TB;                      //通道号
-    pwm_p_data.frequency = 200;                             //40KHz
+    pwm_p_data.frequency = 500;                             //40KHz
     pwm_p_data.duty = 0;                                    //占空比0%
     pwm_p_data.h_pin = TB_GPIO;                             //任意引脚 
     pwm_p_data.l_pin = -1;                                  //任意引脚,不需要就填-1

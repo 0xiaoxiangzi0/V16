@@ -7313,10 +7313,10 @@ OUTPUT(cpu/br28/tools/sdk.elf elf32-pi32v2)
 .debug_frame    0x00000000    0x2892c
  .debug_frame   0x00000000    0x2892c cpu/br28/tools/sdk.elf.o
 
-.debug_line     0x00000000    0xfe199
- .debug_line    0x00000000    0xfe047 cpu/br28/tools/sdk.elf.o
- .debug_line    0x000fe047       0x30 objs/apps/watch/sdk_version.z.S.o
- .debug_line    0x000fe077      0x122 cpu/br28/liba/cpu.a(startup.S.o)
+.debug_line     0x00000000    0xfe1ab
+ .debug_line    0x00000000    0xfe059 cpu/br28/tools/sdk.elf.o
+ .debug_line    0x000fe059       0x30 objs/apps/watch/sdk_version.z.S.o
+ .debug_line    0x000fe089      0x122 cpu/br28/liba/cpu.a(startup.S.o)
 
 .debug_aranges  0x00000000       0x28
  .debug_aranges

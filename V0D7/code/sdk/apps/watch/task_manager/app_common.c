@@ -388,6 +388,7 @@ int app_common_key_msg_deal(struct sys_event *event)
                 UI_HIDE_CURR_WINDOW();
                 UI_SHOW_WINDOW(ID_WINDOW_BT);
             } else {
+                //需要跳转 特效时，由其他页面（包含快捷菜单页面）切换到表盘页面
                 printf(">>>>>>>>>>>>>%s %d \n", __FUNCTION__, __LINE__);
                 static struct effect_sca_alpha sal = {0};
                 sal.alpha = 100;
