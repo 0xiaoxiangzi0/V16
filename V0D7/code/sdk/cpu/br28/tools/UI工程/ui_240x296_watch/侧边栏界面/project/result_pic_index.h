@@ -44,8 +44,6 @@
 #define  PAGE1_6d30_ICON_CHARGING_03    0x010022 //  config\蓝牙智能手表切图\下拉菜单\icon_charging_03.png
 #define  PAGE1_71ca_ICON_CHARGING_04    0x010023 //  config\蓝牙智能手表切图\下拉菜单\icon_charging_04.png
 #define  PAGE1_1e8f_ICON_CHARGING_05    0x010024 //  config\蓝牙智能手表切图\下拉菜单\icon_charging_05.png
-#define  PAGE1_86c0_SMOKINGPOWER        0x010025 //  config\240x296 png切图\20240430\2.SlideUpShortCutMenu\SmokingPower.png
-#define  PAGE1_da7f_CHILDRENSLOCK       0x010026 //  config\240x296 png切图\20240430\2.SlideUpShortCutMenu\ChildrensLock.png
 
 //PAGE 2
 #define  PAGE2_a8f7_QQ_24               0x020001 //  config\蓝牙智能手表切图\消息通知\qq_24.png

@@ -721,9 +721,9 @@ DAC硬件上的连接方式,可选的配置：
 #define TCFG_TP_RESET_IO                    IO_PORTG_06 //TP复位脚
 #define TCFG_TP_POWER_IO                    IO_PORTG_07 //TP电源脚
 
-#define TCFG_TP_SLEEP_EN					DISABLE	// 触摸屏sleep使能
-#define TP_POWER_DOWN_EN                    DISABLE  //tp掉电使能
-#define LCD_POWER_DOWN_EN                   DISABLE  //lcd屏掉电使能
+#define TCFG_TP_SLEEP_EN					DISABLE	 // 触摸屏sleep使能
+#define TP_POWER_DOWN_EN                    ENABLE  //tp掉电使能
+#define LCD_POWER_DOWN_EN                   ENABLE  //lcd屏掉电使能
 #if TCFG_TP_SLEEP_EN && TP_POWER_DOWN_EN
 #error "Please choose one of the two ways!!!" //请根据实际电路选择其中的一种方式
 #endif

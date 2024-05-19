@@ -6005,6 +6005,7 @@ objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,msys_to_p11_common_cmd,l
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,gpio_set_direction,l
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,gpio_direction_output,l
+-r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,ctp_poweron,l
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,bl6133_test,l
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,bl6133_int_en,l
 -r=objs/apps/watch/board/br28/board_701n_demo/board_701n_demo.c.o,init_norsdfile_hdl,l
@@ -13670,6 +13671,10 @@ objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,br28_malloc,l
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,ui_st77903_uninit,l
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,br28_free,l
+-r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,ctp_poweroff,l
+-r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,ctp_poweron,l
+-r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,bl6133_test,l
+-r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,bl6133_int_en,l
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,lcd_draw,l
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,lcd_set_draw_area,l
 -r=objs/cpu/br28/ui_driver/lcd_drive/lcd_drive.c.o,lcd_full_clear,l
