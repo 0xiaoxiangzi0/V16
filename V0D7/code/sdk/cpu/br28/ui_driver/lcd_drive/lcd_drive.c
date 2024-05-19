@@ -357,8 +357,12 @@ static void spi_dc_ctrl(u8 val)
 }
 
 // TE 控制
+static u8 lcd_check = 0;
 static int spi_te_stat()
 {
+	if(lcd_check == 0)
+        return -1;
+
     if (lcd_dat->pin_te == NO_CONFIG_PORT) {
         return -1;
     }
@@ -1189,6 +1193,12 @@ int lcd_drv_init(void *p)
             }
         }
     }
+
+	if(__lcd->lcd_id == __lcd->read_id())
+	{
+		lcd_check = 1;
+	}
+	//printf(" p->lcd_id : 0x%x, read_id : 0x%x\n", __lcd->lcd_id, __lcd->read_id());
 
 #if defined(TCFG_PSRAM_DEV_ENABLE) && TCFG_PSRAM_DEV_ENABLE
     //psram 双buffer滑动截取显示demo
