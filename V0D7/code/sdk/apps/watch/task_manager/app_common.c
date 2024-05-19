@@ -425,9 +425,9 @@ int app_common_key_msg_deal(struct sys_event *event)
         break;
 
     case KEY_UI_SMOKING:
+        OpenSmokingTimer();
         UI_HIDE_CURR_WINDOW();
         UI_SHOW_WINDOW(ID_WINDOW_SMOKE);
-        OpenSmokingTimer();
         break;
         
     case KEY_UI_POWEROFF:

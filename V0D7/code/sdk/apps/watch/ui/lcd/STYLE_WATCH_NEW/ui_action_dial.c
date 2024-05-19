@@ -1796,9 +1796,9 @@ static int WATCH_onkey(void *ctr, struct element_key_event *e)
         break;
 
     case KEY_UI_SMOKING:
+        OpenSmokingTimer();
         UI_HIDE_CURR_WINDOW();
         UI_SHOW_WINDOW(ID_WINDOW_SMOKE);
-        OpenSmokingTimer();
         break;
 
     default:

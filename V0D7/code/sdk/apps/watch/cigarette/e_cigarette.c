@@ -15,20 +15,18 @@ static u16 d_u16SmokingTimerID = 0;
 #define BAT_PERCENT_0   3500//350
 #define BAT_PERCENT_100 4100//410
 
-#define USAGE_POWER_100  247500000   
+#define USAGE_POWER_100  24750000   
 
 uint16_t d_u16Vbat = 430;
 uint32_t d_u32VbatUpdateTimer = 0;
 
 uint32_t d_u32UsedPower = 0x00;
 //当前发热丝工作时间
-uint32_t d_u32RsUsedTime = 0x00;
+uint32_t d_u32RsUsedTimeCount = 0x00;
 
 bool     d_bMicDetectFlag = FALSE;
 uint8_t  d_bRsState = FALSE;
 uint8_t  d_u8RealPowerMode    = 2;
-
-static uint32_t d_u32LastSmokingTime = 0;
 
 STRUCT_CIGARETTE_DISPLAY d_strCigaretteDis = {2,0};
 
@@ -204,23 +202,146 @@ void SetVbatUpdateTimerId(uint32_t id)
     d_u32VbatUpdateTimer = id;
 }
 
+/*
+*******************************************************************************
+ *Function:     GetUsedOilQuantity
+ *Description:  从flash中读出油量数据
+ *Calls:       
+ *Called By:   
+ *Input:       
+ *Output:      
+ *Return:      
+ *Others:       
+*******************************************************************************
+*/
+void GetUsedOilQuantity(void)
+{
+    int ret;
+
+    ret = syscfg_read(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
+    if(ret != 4){
+        //内存中没有数据，将初始数据写入内存
+        d_u32UsedPower = 0;
+        do{
+            ret = syscfg_write(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
+        }while(ret != 4);
+    }
+}
+
+/*
+*******************************************************************************
+ *Function:     SetUsedOilQuantity
+ *Description:  将油量数据写入Flash中
+ *Calls:       
+ *Called By:   
+ *Input:       
+ *Output:      
+ *Return:      
+ *Others:       
+*******************************************************************************
+*/
+void SetUsedOilQuantity(void)
+{
+    int ret;
+    
+    do{
+        ret = syscfg_write(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
+    }while(ret != 4);
+}
+
+/*
+*******************************************************************************
+ *Function:     RecordUsagePower
+ *Description:  记录使用的功率
+ *Calls:       
+ *Called By:   
+ *Input:       
+ *Output:      
+ *Return:      
+ *Others:       
+*******************************************************************************
+*/
+void RecordUsagePower(void)
+{
+    static uint32_t l_u32FirstTimesGetUsedPower = 0;
+    static uint8_t l_bLastRsState = FALSE;
+    uint32_t l_u32CurrentUsedPower = 0;
+    uint32_t l_u32Temp = 0;
+
+    uint32_t l_u32GradePower[3] = {110, 130, 150};
+		
+		//首次上电，获取已消耗的功率
+    if(!l_u32FirstTimesGetUsedPower){
+        l_u32FirstTimesGetUsedPower = TRUE;
+
+        GetUsedOilQuantity();
+        if(d_u32UsedPower > USAGE_POWER_100){
+            d_strCigaretteDis.OilNum = 0;
+        }
+        else{
+            l_u32Temp = USAGE_POWER_100 / 101;
+            d_strCigaretteDis.OilNum = (USAGE_POWER_100 - d_u32UsedPower) / l_u32Temp;
+            if(d_strCigaretteDis.OilNum > 100){
+                d_strCigaretteDis.OilNum = 100;
+            }
+        }
+        printf("1.d_u32UsedPower = %d",d_u32UsedPower);
+        printf("1.OilNum = %d",d_strCigaretteDis.OilNum);
+    }
+    else{
+        if(l_bLastRsState && (!d_bRsState)){
+            //油量已经抽完了，不需要再累计了
+            if(d_u32UsedPower > USAGE_POWER_100){
+                d_strCigaretteDis.OilNum = 0;
+            }
+            else{
+                l_u32CurrentUsedPower = d_u32RsUsedTimeCount * l_u32GradePower[d_u8RealPowerMode - 1];
+                printf("l_u32CurrentUsedPower: %d\n",l_u32CurrentUsedPower);
+                d_u32UsedPower += l_u32CurrentUsedPower;
+                printf("d_u32UsedPower: %d\n",d_u32UsedPower);
+                SetUsedOilQuantity();
+                if(d_u32UsedPower > USAGE_POWER_100){
+                    d_strCigaretteDis.OilNum = 0;
+                }
+                else{
+                    l_u32Temp = USAGE_POWER_100 / 101;
+                    d_strCigaretteDis.OilNum = (USAGE_POWER_100 - d_u32UsedPower) / l_u32Temp;
+                    if(d_strCigaretteDis.OilNum > 100){
+                            d_strCigaretteDis.OilNum = 100;
+                    }
+                }
+            }
+        }
+    }
+    l_bLastRsState = d_bRsState;
+}
+
 void vbat_update_timer(void *priv)
 {
     //上电还没有检测过电量
     static uint8_t l_u8PowerOnFirstDet = true;
+    static bool    l_bLastRsState = FALSE;
+    static uint32_t l_u32LastSmokingTime = 0x00;
     uint32_t l_u32CurrentTime = 0;
     static uint8_t l_u8Count = 0;
     static uint8_t l_u8State = 0;
 
+    RecordUsagePower();
     l_u32CurrentTime = OSGetTime();
+    // //停止吸烟，更新停止吸烟时间
+    if((l_bLastRsState) && (!d_bRsState)){
+        l_u32LastSmokingTime = l_u32CurrentTime;
+    }
+    l_bLastRsState = d_bRsState;
+
     //上次抽烟时间大于当前时间，说明时间戳溢出了，那么更新上一次抽烟时间
-    if(d_u32LastSmokingTime > l_u32CurrentTime){
-        d_u32LastSmokingTime = l_u32CurrentTime;
+    if(l_u32LastSmokingTime > l_u32CurrentTime){
+        l_u32LastSmokingTime = l_u32CurrentTime;
     }
     
     switch(l_u8State){
         case 0:
-            if((l_u32CurrentTime - d_u32LastSmokingTime >= TIME_25_SECOND) ||
+            if((l_u32CurrentTime - l_u32LastSmokingTime >= TIME_25_SECOND) ||
                (l_u8PowerOnFirstDet)){
                 l_u8State = 1;
                 l_u8Count = 0;
@@ -228,7 +349,7 @@ void vbat_update_timer(void *priv)
             break;
 
         case 1:
-            if((l_u32CurrentTime - d_u32LastSmokingTime >= TIME_25_SECOND) || 
+            if((l_u32CurrentTime - l_u32LastSmokingTime >= TIME_25_SECOND) || 
                (l_u8PowerOnFirstDet)){
                 d_strCigaretteDis.VbatPercent = UpdateBatPercent();
                 l_u8Count++;
@@ -380,7 +501,7 @@ static void fire_tA_tb(void)
                 else{
                     l_u8State = 1;
                     d_bRsState = TRUE;
-                    d_u32RsUsedTime = OSGetTime();
+                    d_u32RsUsedTimeCount = 0x00;
                     l_bRsSupersedeFlag = !l_bRsSupersedeFlag;
                 }
             }
@@ -397,7 +518,7 @@ static void fire_tA_tb(void)
                     l_u8TempTbPwm = ta_pwm_output_duty();
                     l_u8TempTaPwm = tb_pwm_output_duty();
                 }
-                d_u32LastSmokingTime = OSGetTime();
+                d_u32RsUsedTimeCount++;
             }
     		else{
     		    l_u8TempTaPwm = 0;
@@ -405,7 +526,6 @@ static void fire_tA_tb(void)
     		    l_u8State = 0;
 
     			d_bRsState = FALSE;
-                d_u32RsUsedTime = OSGetTime() - d_u32RsUsedTime;
     		}
     		break;
         default:
@@ -445,128 +565,6 @@ uint8_t GetDisplayGearPosition(void)
     return 18;
 }
 
-/*
-*******************************************************************************
- *Function:     SetUsedOilQuantity
- *Description:  将油量数据写入Flash中
- *Calls:       
- *Called By:   
- *Input:       
- *Output:      
- *Return:      
- *Others:       
-*******************************************************************************
-*/
-void SetUsedOilQuantity(void)
-{
-    int ret;
-    
-    do{
-        ret = syscfg_write(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
-    }while(ret != 4);
-}
-
-/*
-*******************************************************************************
- *Function:     GetUsedOilQuantity
- *Description:  从flash中读出油量数据
- *Calls:       
- *Called By:   
- *Input:       
- *Output:      
- *Return:      
- *Others:       
-*******************************************************************************
-*/
-void GetUsedOilQuantity(void)
-{
-    int ret;
-
-    ret = syscfg_read(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
-    if(ret != 4){
-        //内存中没有数据，将初始数据写入内存
-        d_u32UsedPower = 0;
-        do{
-            ret = syscfg_write(CFG_USER_OIL_QUANTITY,&d_u32UsedPower,4);
-        }while(ret != 4);
-    }
-}
-
-/*
-*******************************************************************************
- *Function:     RecordUsagePower
- *Description:  记录使用的功率
- *Calls:       
- *Called By:   
- *Input:       
- *Output:      
- *Return:      
- *Others:       
-*******************************************************************************
-*/
-void RecordUsagePower(void)
-{
-    static uint32_t l_u32FirstTimesGetUsedPower = 0;
-    static uint8_t l_bLastRsState = FALSE;
-    uint32_t l_u32CurrentUsedPower = 0;
-    uint32_t l_u32Temp = 0;
-
-    uint32_t l_u32GradePower[3] = {110, 130, 150};
-		
-		//首次上电，获取已消耗的功率
-    if(!l_u32FirstTimesGetUsedPower){
-        l_u32FirstTimesGetUsedPower = TRUE;
-
-        GetUsedOilQuantity();
-        if(d_u32UsedPower > USAGE_POWER_100){
-            d_strCigaretteDis.OilNum = 0;
-        }
-        else{
-            l_u32Temp = USAGE_POWER_100 / 101;
-            d_strCigaretteDis.OilNum = (USAGE_POWER_100 - d_u32UsedPower) / l_u32Temp;
-            if(d_strCigaretteDis.OilNum > 100){
-                d_strCigaretteDis.OilNum = 100;
-            }
-        }
-        // printf("1.d_u32UsedPower = %d",d_u32UsedPower);
-        // printf("1.OilNum = %d",d_strCigaretteDis.OilNum);
-    }
-    else{
-        if(l_bLastRsState && (!d_bRsState)){
-            //油量已经抽完了，不需要再累计了
-            if(d_u32UsedPower > USAGE_POWER_100){
-                d_strCigaretteDis.OilNum = 0;
-            }
-            else{
-                l_u32CurrentUsedPower = d_u32RsUsedTime * 10 * l_u32GradePower[d_u8RealPowerMode - 1];		
-                d_u32UsedPower += l_u32CurrentUsedPower;
-                SetUsedOilQuantity();
-                if(d_u32UsedPower > USAGE_POWER_100){
-                    d_strCigaretteDis.OilNum = 0;
-                }
-                else{
-                    l_u32Temp = USAGE_POWER_100 / 101;
-                    d_strCigaretteDis.OilNum = (USAGE_POWER_100 - d_u32UsedPower) / l_u32Temp;
-                    if(d_strCigaretteDis.OilNum > 100){
-                            d_strCigaretteDis.OilNum = 100;
-                    }
-                }
-            }
-            // printf("2.d_u32UsedPower = %d",d_u32UsedPower);
-            // printf("2.OilNum = %d",d_strCigaretteDis.OilNum);
-
-            // //一次抽烟已经完成，可以退出抽烟界面了
-            // if(0 != d_u16SmokingTimerID){	    
-            //     sys_timer_del(d_u16SmokingTimerID);
-            //     d_u16SmokingTimerID = 0;
-            //     UI_HIDE_CURR_WINDOW();
-            //     UI_SHOW_WINDOW(ID_WINDOW_CLOCK);
-            // }
-        }
-    }
-    l_bLastRsState = d_bRsState;
-}
-
 void SmokingDet(void *parm)
 {
     static uint8_t l_u8MicDisableCount = 0;
@@ -578,7 +576,7 @@ void SmokingDet(void *parm)
         if(l_u8MicDisableCount >= 10){
             l_u8MicDisableCount = 0;
             if(0 != d_u16SmokingTimerID){
-                sys_timer_del(d_u16SmokingTimerID);
+                sys_hi_timer_del(d_u16SmokingTimerID);
                 d_u16SmokingTimerID = 0;
                 UI_HIDE_CURR_WINDOW();
                 UI_SHOW_WINDOW(ID_WINDOW_CLOCK);
@@ -590,13 +588,12 @@ void SmokingDet(void *parm)
     }
 
     fire_tA_tb();
-    RecordUsagePower();
 }
 
 void OpenSmokingTimer(void)
 {
     if(d_u16SmokingTimerID == 0){
         ta_tb_pwm_init();
-        d_u16SmokingTimerID = sys_timer_add(NULL, SmokingDet, 10);
+        d_u16SmokingTimerID = sys_hi_timer_add(NULL, SmokingDet, 10);
     }
 }
