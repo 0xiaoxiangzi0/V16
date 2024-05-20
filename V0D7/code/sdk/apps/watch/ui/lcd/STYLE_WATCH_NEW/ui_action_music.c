@@ -471,7 +471,9 @@ static int music_layout_onchange(void *ctr, enum element_change_event e, void *a
         struct ui_text *text = (struct ui_text *)ui_core_get_element_by_id(MUSIC_NAME_TEXT);
         struct ui_pic *pic = (struct ui_pic *)ui_core_get_element_by_id(MUSIC_DEV_LOGO_PIC);
         if (text) {
+#if TCFG_APP_MUSIC_EN            
             music_name = music_file_get_cur_name(&len, &is_unicode);
+#endif
             ui_pic_set_image_index(pic, 0);
             if (len && music_name) {
                 if (is_unicode) {

@@ -69,7 +69,13 @@ extern int jl_kws_voice_event_handle(struct key_event *key);
 
 // u32 ui_show_page_list[9] = {DIAL_PAGE_0, PAGE_13};
 // u32 ui_show_page_list[9] = {DIAL_PAGE_0, ID_WINDOW_SET_PAGE};
-u32 ui_show_page_list[9] = {DIAL_PAGE_0};
+u32 ui_show_page_list[9] = {DIAL_PAGE_0,
+                            ID_WINDOW_SET_PAGE,             //设置页面
+                            ID_WINDOW_GAME_PAGE,            //游戏页面
+                            ID_WINDOW_LOTTERY_TRAY,         //抽奖盘页面
+                            ID_WINDOW_SMOKING_POWER_CHG,    //调整吸烟功率页面
+                            ID_WINDOW_FLAVOR_LIST,          //电子烟口味列表页面
+                            };
 static int curr_page = 0;
 
 __attribute__((weak))u8 ui_show_menu_page()

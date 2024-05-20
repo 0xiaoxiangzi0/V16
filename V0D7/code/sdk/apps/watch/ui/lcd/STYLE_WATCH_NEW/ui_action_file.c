@@ -203,9 +203,11 @@ static int file_select_enter(u32 index)
         __this->flist_index = 1;//记录索引
     } else {
         if (app_get_curr_task() != APP_MUSIC_TASK) {
+#if TCFG_APP_MUSIC_EN            
             music_task_set_parm(MUSIC_TASK_START_BY_SCLUST, info->sclust);
             /* dev_manager_set_active_by_logo(dev_logo); */
             music_set_start_auto_play(1);
+#endif            
             app_task_switch_to(APP_MUSIC_TASK);
         } else {
             app_task_put_key_msg(KEY_MUSIC_PLAYE_BY_DEV_SCLUST, info->sclust);

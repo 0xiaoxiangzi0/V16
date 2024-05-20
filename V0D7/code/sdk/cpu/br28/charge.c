@@ -146,7 +146,7 @@ void charge_event_to_user(u8 event)
 static void charge_cc_check(void *priv)
 {
     if ((adc_get_voltage(AD_CH_VBAT) * 4 / 10) > CHARGE_CCVOL_V) {
-        power_set_mode(PWR_DCDC15);
+        power_set_mode(PWR_LDO15);
         set_charge_mA(__this->data->charge_mA);
         usr_timer_del(__this->cc_timer);
         __this->cc_timer = 0;
@@ -171,7 +171,7 @@ void charge_start(void)
 
     //进入恒流充电之后,才开启充满检测
     if ((adc_get_voltage(AD_CH_VBAT) * 4 / 10) > CHARGE_CCVOL_V) {
-        power_set_mode(PWR_DCDC15);
+        power_set_mode(PWR_LDO15);
         set_charge_mA(__this->data->charge_mA);
         power_awakeup_gpio_enable(IO_CHGFL_DET, 1);
         check_full = 1;

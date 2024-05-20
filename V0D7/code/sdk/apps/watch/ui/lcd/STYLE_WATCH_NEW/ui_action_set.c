@@ -103,11 +103,11 @@ const u32 ui_page_list[] = {
 //     /* 12*/ID_WINDOW_BLOOD_OXYGEN,         //血氧饱和度
 //     /* 13*/ID_WINDOW_COMPASS,              //指南针
 
-    /* 0 */ID_WINDOW_SET_PAGE,             //设置页面
-    /* 1 */ID_WINDOW_GAME_PAGE,            //游戏页面
-    /* 2 */ID_WINDOW_LOTTERY_TRAY,         //抽奖盘页面
-    /* 3 */ID_WINDOW_SMOKING_POWER_CHG,    //调整吸烟功率页面
-    /* 4 */ID_WINDOW_FLAVOR_LIST,          //电子烟口味列表页面
+    /* 0 */0,             //设置页面
+    /* 1 */0,            //游戏页面
+    /* 2 */0,         //抽奖盘页面
+    /* 3 */0,    //调整吸烟功率页面
+    /* 4 */0,          //电子烟口味列表页面
     /* 5 */0,                              //备用
     /* 6 */0,                              //备用
     /* 7 */0,                              //备用

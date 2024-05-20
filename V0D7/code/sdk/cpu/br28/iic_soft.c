@@ -79,7 +79,7 @@ static inline u32 iic_get_io_pu(soft_iic_dev iic)
 int soft_iic_init(soft_iic_dev iic)
 {
     u32 scl, sda;
-
+    
     scl = iic_get_scl(iic);
     sda = iic_get_sda(iic);
 

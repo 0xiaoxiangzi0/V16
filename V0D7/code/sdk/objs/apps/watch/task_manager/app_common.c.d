@@ -253,6 +253,7 @@ objs/apps/watch/task_manager/app_common.c.o: \
   include_lib/btctrler/classic/hci_lmp.h \
   include_lib/btstack/third_party/common\ble_user.h \
   apps/watch/smartbox/bt_manage/bt_trans_data\le_smartbox_multi_common.h \
+  apps/watch/include\app_charge.h \
   apps/watch/include/user_api\dev_multiplex_api.h \
   include_lib/driver\device/chargebox.h \
   apps/watch/include\app_online_cfg.h \

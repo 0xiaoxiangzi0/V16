@@ -22,7 +22,7 @@
 //                                  app 配置                                       //
 //*********************************************************************************//
 #define TCFG_APP_BT_EN			            1
-#define TCFG_APP_MUSIC_EN			        1
+#define TCFG_APP_MUSIC_EN			        0
 #define TCFG_APP_LINEIN_EN					0
 #define TCFG_APP_FM_EN					    0
 #define TCFG_APP_PC_EN					    0
@@ -598,14 +598,14 @@ DAC硬件上的连接方式,可选的配置：
 //                                  充电参数配置                                   //
 //*********************************************************************************//
 //是否支持芯片内置充电
-#define TCFG_CHARGE_ENABLE					DISABLE_THIS_MOUDLE
+#define TCFG_CHARGE_ENABLE					ENABLE_THIS_MOUDLE
 //是否开启复充功能,复充电压设置
 #define TCFG_RECHARGE_ENABLE                ENABLE
 #define TCFG_RECHARGE_VOLTAGE               4000//4V
 //是否支持开机充电
-#define TCFG_CHARGE_POWERON_ENABLE			DISABLE
+#define TCFG_CHARGE_POWERON_ENABLE			ENABLE
 //是否支持拔出充电自动开机功能
-#define TCFG_CHARGE_OFF_POWERON_NE			DISABLE
+#define TCFG_CHARGE_OFF_POWERON_NE			ENABLE
 /*充电截止电压可选配置*/
 #define TCFG_CHARGE_FULL_V					CHARGE_FULL_V_4199
 /*充电截止电流可选配置*/
@@ -721,9 +721,9 @@ DAC硬件上的连接方式,可选的配置：
 #define TCFG_TP_RESET_IO                    IO_PORTG_06 //TP复位脚
 #define TCFG_TP_POWER_IO                    IO_PORTG_07 //TP电源脚
 
-#define TCFG_TP_SLEEP_EN					DISABLE	 // 触摸屏sleep使能
-#define TP_POWER_DOWN_EN                    ENABLE  //tp掉电使能
-#define LCD_POWER_DOWN_EN                   ENABLE  //lcd屏掉电使能
+#define TCFG_TP_SLEEP_EN					ENABLE	 // 触摸屏sleep使能
+#define TP_POWER_DOWN_EN                    DISABLE  //tp掉电使能
+#define LCD_POWER_DOWN_EN                   DISABLE  //lcd屏掉电使能
 #if TCFG_TP_SLEEP_EN && TP_POWER_DOWN_EN
 #error "Please choose one of the two ways!!!" //请根据实际电路选择其中的一种方式
 #endif
@@ -1015,7 +1015,7 @@ DAC硬件上的连接方式,可选的配置：
 //*********************************************************************************//
 #define TCFG_AUTO_SHUT_DOWN_TIME		          0   //没有蓝牙连接自动关机时间
 #define TCFG_SYS_LVD_EN						      1   //电量检测使能
-#define TCFG_POWER_ON_NEED_KEY				      0	  //是否需要按按键开机配置
+#define TCFG_POWER_ON_NEED_KEY				      1	  //是否需要按按键开机配置
 #define TWFG_APP_POWERON_IGNORE_DEV         	  4000//上电忽略挂载设备，0时不忽略，非0则n毫秒忽略
 
 #if TCFG_IOKEY_ENABLE
@@ -1031,7 +1031,7 @@ DAC硬件上的连接方式,可选的配置：
 //*********************************************************************************//
 #define TCFG_USER_TWS_ENABLE                0   //tws功能使能
 #define TCFG_USER_BLE_ENABLE                0   //BLE功能使能
-#define TCFG_USER_BT_CLASSIC_ENABLE         1   //经典蓝牙功能使能
+#define TCFG_USER_BT_CLASSIC_ENABLE         0   //经典蓝牙功能使能
 #define TCFG_BT_SUPPORT_AAC                 0   //AAC格式支持
 #define TCFG_USER_EMITTER_ENABLE            1   //emitter功能使能
 #define TCFG_BT_SNIFF_ENABLE                1   //bt sniff 功能使能
@@ -1160,7 +1160,7 @@ DAC硬件上的连接方式,可选的配置：
 #if (SMART_BOX_EN)                       //rcsp需要打开ble
 
 #undef TCFG_USER_BLE_ENABLE
-#define TCFG_USER_BLE_ENABLE         1   //双模工程，默认打开BLE功能使能
+#define TCFG_USER_BLE_ENABLE                1   //双模工程，默认打开BLE功能使能
 
 //BLE多连接,多开注意RAM的使用--中强添加
 #define SMBOX_MULTI_BLE_EN                  0 //蓝牙BLE多连:1主1从

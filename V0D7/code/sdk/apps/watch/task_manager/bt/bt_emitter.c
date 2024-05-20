@@ -988,8 +988,10 @@ void emitter_media_source(u8 *addr, u8 source, u8 en)
         /*关闭当前的source通道*/
         //emitter_media_source_close(emitter_info.media_source);
         if ((true != app_check_curr_task(APP_MUSIC_TASK))) {
+#if TCFG_APP_MUSIC_EN            
             extern void music_set_start_auto_play(u8 on);
             music_set_start_auto_play(1);
+#endif
             app_task_switch_to(APP_MUSIC_TASK);
             return;
         }
